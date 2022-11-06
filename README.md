@@ -1,8 +1,16 @@
-# GRAND-SCHMIDT CALCULATOR
+# GRAM-SCHMIDT CALCULATOR
 
+A GUI Calculator for the Gram-Schmidt Processs
 ....
 
+## Sneek Peek
+
+...
+
 ## How to use
+
+1. Clone repo
+2. Run `index.py` with python
 
 ...
 
