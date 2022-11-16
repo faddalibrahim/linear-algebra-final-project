@@ -10,7 +10,8 @@ A GUI Calculator for the Gram-Schmidt Processs
 ## How to use
 
 1. Clone repo
-2. Run `index.py` with python
+2. Install customtkinter `pip install customtkinter`
+3. Run `python index.py` with python
 
 ...
 
