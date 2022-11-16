@@ -1,3 +1,3 @@
 from ui import GramSchmidt
 
-GramSchmidt()
+GramSchmidt().mainloop()
