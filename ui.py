@@ -17,7 +17,7 @@ class GramSchmidt(customtkinter.CTk):
     """
 
     def __init__(self):
-        self.result = [[2, 3, 1], [0, 5, 4], [7, -8, 10]]
+        self.result = None
         """
         The constructor. This is where the tkinter
         frame is built and all the widgets are a
