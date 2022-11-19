@@ -12,15 +12,14 @@ customtkinter.set_default_color_theme("blue")
 
 class GramSchmidt(customtkinter.CTk):
     """
-    The GUI class. This class does all
-    the front-end stuff and uses tkinter.
+    The GUI class.
     """
 
     def __init__(self):
         self.result = None
         """
         The constructor. This is where the tkinter
-        frame is built and all the widgets are a
+        frame is built and all the components are a
         added.
         """
 
