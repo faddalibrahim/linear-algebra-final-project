@@ -1,3 +1,6 @@
 from ui import GramSchmidt
 
-GramSchmidt().mainloop()
+
+GS = GramSchmidt()
+GS.mainloop()
+GS.plot(GS.result)

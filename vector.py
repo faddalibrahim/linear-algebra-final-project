@@ -80,3 +80,7 @@ class Vector:
         """
 
         return str(self.value)
+
+    @staticmethod
+    def plot():
+        pass

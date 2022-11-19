@@ -4,6 +4,8 @@ from calculator import calculate
 from tkinter import *
 import customtkinter
 
+import matplotlib.pyplot as plt
+
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("blue")
 
@@ -15,6 +17,7 @@ class GramSchmidt(customtkinter.CTk):
     """
 
     def __init__(self):
+        self.result = [[2, 3, 1], [0, 5, 4], [7, -8, 10]]
         """
         The constructor. This is where the tkinter
         frame is built and all the widgets are a
@@ -175,7 +178,9 @@ class GramSchmidt(customtkinter.CTk):
         result = calculate(vectors)
 
         # Output the result to the GUI.
+        # self.plot(result)
         self.displayResult(result)
+        self.result = result
 
     def displayResult(self, result):
         """
@@ -226,3 +231,36 @@ class GramSchmidt(customtkinter.CTk):
         # Empty the entries list and the labels list.
         self.entries = []
         self.labels = []
+
+    def plot(self, vectors):
+        print(vectors)
+        fig = plt.figure()
+        ax = plt.axes(projection='3d')
+
+        xs = []
+        ys = []
+        zs = []
+
+        for i in range(len(vectors)):
+            vector = vectors[i]
+
+            for j in range(len(vector)):
+                if j == 0:
+                    xs.append(vector[j])
+                if j == 1:
+                    ys.append(vector[j])
+                if j == 2:
+                    zs.append(vector[j])
+
+        ax.set_xlim([min(xs)-1, max(xs)+1])
+        ax.set_ylim([min(ys)-1, max(ys)+1])
+        ax.set_zlim([min(zs)-1, max(zs)+1])
+
+        ax.quiver(0, 0, 0, vectors[0][0], vectors[0]
+                  [1], vectors[0][2], color='r')
+        ax.quiver(0, 0, 0, vectors[1][0], vectors[1]
+                  [1], vectors[1][2], color='b')
+        ax.quiver(0, 0, 0, vectors[2][0], vectors[2]
+                  [1], vectors[2][2], color='g')
+
+        plt.show()
